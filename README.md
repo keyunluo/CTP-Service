@@ -210,3 +210,7 @@ data = requests.get('http://127.0.0.1:7000/trade/ctp/get_orders').json()
   # '       36554@MA301'
   data = requests.get('http://127.0.0.1:7000/trade/ctp/order_delete?order_id=       36554@MA301').json()
   ```
+
+---
+
+欢迎关注我的公众号“**量化实战**”，原创技术文章第一时间推送。
