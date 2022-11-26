@@ -762,13 +762,19 @@ class Client:
 
 @api.route('/login', methods=['GET'])    
 async def login(request):
-    ctp_client.login()
-    return response.json({"time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
+    try:
+        ctp_client.login()
+        return response.json({"time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
+    except Exception as e:
+        return response.json({"error": str(e)}, ensure_ascii=False)
 
 @api.route('/logout', methods=['GET'])    
 async def logout(request):
-    ctp_client.logout()
-    return response.json({"time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
+    try:
+        ctp_client.logout()
+        return response.json({"time": datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')})
+    except Exception as e:
+        return response.json({"error": str(e)}, ensure_ascii=False)
 
 @api.route('/get_account', methods=['GET'])    
 async def get_account(request):
