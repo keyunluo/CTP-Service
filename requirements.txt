@@ -1,0 +1,5 @@
+aiohttp
+apscheduler
+cython
+ctpwrapper
+sanic<22
