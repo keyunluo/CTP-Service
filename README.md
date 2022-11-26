@@ -1,6 +1,6 @@
 # CTP接口Python Web服务
 
-基于[ctpwrapper](https://github.com/nooperpudd/ctpwrapper)和[ctp_client][ctp_client](https://github.com/zhou-yuxin/ctp_client)的CTP轻量级Python Web服务封装，可查询期货、期权行情以及进行下单交易。
+基于[ctpwrapper](https://github.com/nooperpudd/ctpwrapper)和[ctp_client](https://github.com/zhou-yuxin/ctp_client)的CTP轻量级Python Web服务封装，可查询期货、期权行情以及进行下单交易。
 
 - [x] HTTP请求Tick行情
 - [x] HTTP请求期货期权合约代码
