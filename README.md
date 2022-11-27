@@ -214,3 +214,4 @@ data = requests.get('http://127.0.0.1:7000/trade/ctp/get_orders').json()
 ---
 
 欢迎关注我的公众号“**量化实战**”，原创技术文章第一时间推送。
+![](qrcode.jpg)
