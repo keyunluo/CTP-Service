@@ -986,11 +986,10 @@ async def market_realtime_dayline(request):
     return response.json(data, ensure_ascii=False)
 
 
-
+app = Sanic(name=__name__)
+app.config.RESPONSE_TIMEOUT = 6000000
+app.config.REQUEST_TIMEOUT = 6000000
+app.config.KEEP_ALIVE_TIMEOUT = 600000
+app.blueprint(api)
 if __name__ == '__main__':
-    app = Sanic(name=__name__)
-    app.config.RESPONSE_TIMEOUT = 6000000
-    app.config.REQUEST_TIMEOUT = 6000000
-    app.config.KEEP_ALIVE_TIMEOUT = 600000
-    app.blueprint(api)
     app.run(host='0.0.0.0', port=7000, workers=1, debug=True, auto_reload=True)
